@@ -1,0 +1,28 @@
+{
+  "name": "egwebscraper",
+  "version": "1.0.0",
+  "description": "This is a webscraper that will scrape sites and put the information into a mongodb",
+  "main": "server.js",
+  "scripts": {
+    "test": "run",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThePalad1n/egwebscraper.git"
+  },
+  "author": "ThePalad1n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThePalad1n/egwebscraper/issues"
+  },
+  "homepage": "https://github.com/ThePalad1n/egwebscraper#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cherio": "^1.0.0-rc.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "gitignore": "^0.6.0",
+    "mongoose": "^5.9.19"
+  }
+}
