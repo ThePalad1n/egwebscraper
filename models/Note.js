@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
 var NoteSchema = mongoose.Schema({
-	_id: mongoose.Types.ObjectId,
 	body: String,
-	article: mongoose.Types.ObjectId,
+	article: Schema.Types.ObjectId,
 		// ref: "Article"
 });
 

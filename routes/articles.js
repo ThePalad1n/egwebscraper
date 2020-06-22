@@ -2,16 +2,11 @@ var Article = require('../models/Article');
 var cheerio = require("cheerio");
 var request = require('request');
 var exphbs = require('express-handlebars');
+const { Mongoose } = require('mongoose');
 
 
 module.exports = (app) => {
 
-
-	app.get('/home', (req, res) => {
-		res.render("home")
-	  });
-
-	  
 app.get("/", function(req,res){
 	Article.find({"saved": false}).limit(20).exec(function(error,data){
 		var hbsObject = {
@@ -78,6 +73,15 @@ app.get("/articles/:id", function(req,res){
 		}
 	});
 });
+
+// app.post("/scrape", (req,res,next) => {
+// 	const article = new Article({
+// 		_id: new Mongoose.Types.ObjectId(),
+// 		title: req.body.title,
+// 		summary: req.body.summary,
+// 		link: req.body.link
+// 	})
+// })
 
 app.post("/articles/save/:id", function(req,res){
 	Article.findOneAndUpdate({ "_id": req.params.id}, {"saved": true})

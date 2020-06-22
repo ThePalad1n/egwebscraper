@@ -29,9 +29,12 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.engine("handlebars", exphbs({
-	defaultLayout: "main"
+	defaultLayout: "main",
+	partialsDir: path.join(__dirname, "/views/layouts/partials")
 }));
 app.set("view engine", "handlebars");
+
+
 
 db.on("error", function(error){
 	console.log("Mongoose Error: ", error);

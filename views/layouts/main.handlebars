@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <!--jQuery Link-->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>  
-        <!--CSS Style Sheet-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        {{!-- <link rel="stylesheet" href="/public/assets/css/style.css" type="text/css" /> --}}
 
-        <title>News-Scraper!</title>
-    </head>
-    <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">News Scraper</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/saved">Saved Articles</a></li>
-                    <li><button type="button" class="btn btn-primary" id="scrape">Scrape Articles</button></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!--CSS Style Sheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/stylesheet.css" type="text/css" />
+
+    <title>Article Scraper</title>
+</head>
+
+
+<body>
+    <div id="navbar" class="navbar">
+        <a href="/">Home</a>
+        <a href="/saved">Saved Articles</a>
+        <button type="button" class="btn btn-primary" id="scrape">Scrape Articles</button>
+    </div>
+
+
     {{{ body }}}
 
-        <!--External JS Link-->
-        <script src="/assets/js/app.js"></script>
-    </body>
+
+    <!--External JS Link-->
+    <script src="/assets/js/app.js"></script>
+</body>
+
 </html>
